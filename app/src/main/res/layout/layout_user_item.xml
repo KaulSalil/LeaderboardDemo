@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+    <variable
+        name="viewModel"
+        type="com.example.leaderboarddemo.ui.viewmodel.MainViewModel" />
+        <variable
+            name="data"
+            type="com.example.leaderboarddemo.data.UserData" />
+    </data>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bg_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        android:padding="@dimen/margin_10dp"
+        android:background="@{data.isUser ? @drawable/background_selected_style_16dp : @drawable/background_unselected_style}">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:minWidth="50dp"
+            android:layout_gravity="center_vertical">
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_14sp"
+                tools:text="1000"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/ordinal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_12sp"
+                tools:text="th"/>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/userImage"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="@dimen/margin_5dp"
+            tools:srcCompat="@drawable/user1" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/userName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_12sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="Yash Bhardwaj"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/margin_15dp"
+            android:textSize="@dimen/text_size_12sp"
+            tools:text="98000 pts"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/heading_color"
+            android:layout_marginStart="@dimen/margin_15dp"
+            android:textSize="@dimen/text_size_12sp"
+            tools:text="@string/price_first"/>
+    </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginVertical="@dimen/margin_5dp"
+            android:background="@color/light_blue_grey_two_dark_70"
+            />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

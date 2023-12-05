@@ -1,4 +1,4 @@
-# WITZEAL Android Assignment Leaderboard Screen
+#Android  Leaderboard Screen
 =========================
 
 This is the application for Android Assignment Leaderboard Screen.
@@ -31,4 +31,6 @@ For Loader Animation: Lottie
 
 Proguard: Applied(I tested before applying the apk size was 6.75 MB and after applying it was 3 MB something)
 
-Tested on Devices: redmi 10s, redmi note 8, Mi A2, One plus 6T(as I have limited devices)
+#Main Screen
+![Screenshot_20231205-141142](https://github.com/KaulSalil/LeaderboardDemo/assets/8721680/e7a04bda-479d-4019-8843-d9023ff96259)
+
